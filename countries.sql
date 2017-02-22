@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-02-2017 a las 05:20:05
+-- Tiempo de generación: 22-02-2017 a las 17:20:44
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -46,7 +46,11 @@ INSERT INTO `countries` (`id`, `food`, `specifications`, `name`, `address`, `pho
 (3, 'Arroz con lentejas y queso', 'Con muchas lentejas', 'Ander Phillip Guevara Law', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
 (4, 'Pasta con carne y parmesano', 'Con mucha carne', 'Ander Phillip Guevara Law', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
 (5, 'Sopa de mariscos con arroz', 'Con muchos mariscos', 'Ander Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
-(6, 'Arroz con carne strangonofe', 'Con mucha strangonofe', 'Ander Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 0);
+(6, 'Arroz con carne strangonofe', 'Con mucha strangonofe', 'Ander Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
+(7, 'Pastelitos rellenos de carne', 'Con mucha carne', 'Erick Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
+(8, 'Pastelitos rellenos de pollo', 'Con mucho pollo', 'Erick Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
+(9, 'Pastelitos rellenos de arroz', 'Con mucho arroz', 'Ander Phillip Guevara Law', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 1),
+(10, 'Empanadas de cazón', 'Con mucho cazón', 'Ander Phillip Guevara Law', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I', 2147483647, 0);
 
 --
 -- Índices para tablas volcadas
@@ -66,7 +70,7 @@ ALTER TABLE `countries`
 -- AUTO_INCREMENT de la tabla `countries`
 --
 ALTER TABLE `countries`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
