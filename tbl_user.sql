@@ -1,13 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.0.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 23-02-2017 a las 23:16:02
--- Versión del servidor: 5.5.8
--- Versión de PHP: 5.3.3
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 25-02-2017 a las 07:22:24
+-- Versión del servidor: 5.7.14
+-- Versión de PHP: 5.6.25
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `facilito`
@@ -19,19 +26,18 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Estructura de tabla para la tabla `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tbl_user` (
+  `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `date` date DEFAULT NULL,
   `time` time NOT NULL,
   `email` varchar(128) NOT NULL,
   `phone` varchar(128) NOT NULL,
-  `members` int(128) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=61 ;
+  `members` int(128) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `tbl_user`
+-- Volcado de datos para la tabla `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `name`, `date`, `time`, `email`, `phone`, `members`) VALUES
@@ -57,3 +63,26 @@ INSERT INTO `tbl_user` (`id`, `name`, `date`, `time`, `email`, `phone`, `members
 (20, 'test20', '2017-03-01', '09:30:00', 'test20@example.com', '0111-2131410', 20),
 (21, 'test21', '2017-02-02', '10:00:00', 'test21@example.com', '0615-1413121', 21),
 (22, 'Ander', '2017-02-03', '10:30:00', 'anderguevaralaw@gmail.com', '0214-7483640', 22);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_user`
+--
+ALTER TABLE `tbl_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
