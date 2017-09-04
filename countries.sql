@@ -1,23 +1,24 @@
--- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 25-02-2017 a las 07:22:36
--- Versión del servidor: 5.7.14
--- Versión de PHP: 5.6.25
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 04-09-2017 a las 14:37:41
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 5.2.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `facilito`
+-- Base de datos: `u962932531_facil`
 --
 
 -- --------------------------------------------------------
@@ -26,15 +27,16 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `countries`
 --
 
-CREATE TABLE `countries` (
-  `id` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `countries` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `food` text NOT NULL,
   `specifications` text NOT NULL,
   `name` text NOT NULL,
   `address` text NOT NULL,
   `phone` varchar(128) NOT NULL,
-  `status` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `countries`
@@ -52,25 +54,6 @@ INSERT INTO `countries` (`id`, `food`, `specifications`, `name`, `address`, `pho
 (9, 'Arroz con pollo y ensalada', 'Con mucho arroz', 'Ander Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I. Caracas, Venezuela', '0214-7483647', 1),
 (10, 'Empanadas de cazón', 'Con mucho cazón', 'Ander Guevara', 'Calle Chacao I, Urb Macaracuay, Piso 2, Apto 2-D, Edif Capri I. Caracas, Venezuela', '0414-9041378', 0);
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `countries`
---
-ALTER TABLE `countries`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `countries`
---
-ALTER TABLE `countries`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
